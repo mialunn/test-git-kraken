@@ -1,5 +1,12 @@
-def start():
-    print("Studing python3 env and test git kraken")
+from portscanner import *
+import fire
+
+class Main:
+
+    def start(self):
+        target = Target("localhost", 0, 25565)
+
+        target.print_information()
 
 if __name__ == '__main__':
-    start()
+    fire.Fire(Main)
